@@ -4,13 +4,21 @@ Supports protocols PI30 and PI41 devices.
 
 ### Exposed sensors:
 - Inverter status
-- Grid voltage
-- Grid frequency
-- Output load watt
-- Battery capacity (SOC)
-- Heatsink temperature
-- PV Input Current
-- SCC voltage
+- grid_voltage (V)
+- grid_frequency (Hz)
+- AC output voltage (V)
+- AC output frequency (Hz)
+- AC output apparent power (VA)
+- output_load_watt (W)
+- output_load_percent (%)
+- bus_voltage (V)
+- battery_voltage (V)
+- battery_charge_current (A)
+- battery_capacity (%)
+- heatsink_temperature (°C)
+- PV input current (A)
+- pv_input_voltage (V)
+- PV input watt (W)
 - Warnings
 ### How to run
 Change credentials to your MQTT server and USB port in the command below and run it.
