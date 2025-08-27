@@ -31,7 +31,7 @@ docker run -d --privileged \
   -v /dev:/dev \
   --name voltronic-mqtt \
   -e MQTT_PASSWORD='your_password' \
-  -e MQTT_SERVER=192.168.1.105 \
+  -e MQTT_SERVER='your_MQTT_address' \
   -e MQTT_USER='your_username' \
   -e SERIAL_PORT='/dev/ttyUSB0' \
   voltronic-mqtt
