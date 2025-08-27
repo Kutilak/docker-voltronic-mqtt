@@ -23,12 +23,18 @@ Supports protocols PI30 and PI41 devices.
 ### How to run
 Change credentials to your MQTT server and USB port in the command below and run it.
 ```bash
-docker run -t -i --privileged -v /dev:/dev --restart=always --name voltronic-mqtt --pull=always -e \
-MQTT_PASSWORD='your_password' -e \
-MQTT_SERVER='your_server' -e \
-MQTT_USER='your_username' -e \
-SERIAL_PORT='/dev/ttyUSB0' \
-lavron/voltronic-mqtt:latest
+git clone https://github.com/Kutilak/docker-voltronic-mqtt.git
+cd docker-voltronic-mqtt
+docker build -t voltronic-mqtt .
+docker run -d --privileged \
+  --restart=always \
+  -v /dev:/dev \
+  --name voltronic-mqtt \
+  -e MQTT_PASSWORD='your_password' \
+  -e MQTT_SERVER=192.168.1.105 \
+  -e MQTT_USER='your_username' \
+  -e SERIAL_PORT='/dev/ttyUSB0' \
+  voltronic-mqtt
 ```
 
 ### Home Assistant users
