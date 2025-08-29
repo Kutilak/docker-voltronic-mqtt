@@ -19,7 +19,7 @@
         "pv_input_voltage": {"index": 13, "type": "float"},
         "pv_input_watt": {"index": 19, "type": "int"},
         "battery_voltage_sensor2": {"index": 15, "type": "float"},
-        "flags": {"index": 16, "type": "str"},
+        "flags": {"index": 16, "type": "str"}
     },
     "QPIWS": {
         "warnings": {"index": 0, "type": "str"}
